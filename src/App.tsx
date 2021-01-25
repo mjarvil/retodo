@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-
+import './App.css'
 
 type Todo = {
   id: number;
@@ -68,9 +68,9 @@ const App: React.FC = () => {
     <div className="App">
       <h1>React To do App</h1>
       {doesExist ? (
-        <div>Todo already exists</div>
+        <div className="alert">Todo already exists</div>
       ) : null}
-      <div>
+      <div className="todo-input">
         <input type="text" ref={todoInput} onChange={todoChangeHandler}/>
         <button onClick={addTodo}>Add</button>
       </div>
@@ -78,7 +78,7 @@ const App: React.FC = () => {
       {todoList.length > 0 ? (
         todoList.map((todo, idx) => {
           return (
-            <div key={todo.id}>
+            <div className='todo-list' key={todo.id}>
               <span>{todo.work}</span>
               <button data-id={todo.id} data-todo={todo.work} onClick={deleteTodoHandler}>X</button>
             </div>

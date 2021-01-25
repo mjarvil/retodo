@@ -4,3 +4,74 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #f5f5f5;
+
+  font-size: 2rem;
+}
+
+h1 {
+  text-align: center;
+
+  font-family: Mukta Vaani;
+}
+
+.App {
+  width: 1100px;
+  margin: 50px auto 0 auto;
+}
+
+.todo-input {
+  margin: 20px 0;
+  padding: 0;
+
+  position: relative;
+}
+
+.todo-input > input {
+  width: 70%;
+  background: #ffffff;
+  border: 6px solid #117aab;
+  border-right: none;
+  border-radius: 15px 0px 0px 15px;
+  height: 98px;
+  font-size: 2rem;
+  padding: 15px;
+}
+
+.todo-input > button {
+  position: absolute;
+  width: 30%;
+  height: 98px;
+  padding: 19px;
+  background: #117aab;
+  border-radius: 0px 15px 15px 0px;
+  border: none;
+  font-family: Rhodium Libre;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.todo-list {
+  font-family: Rhodium Libre;
+  font-style: normal;
+  font-weight: normal;
+
+  color: #ffffff;
+
+  background: #117aab;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 20px;
+  margin-top: 10px;
+}
+
+.todo-list > button {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #f7ee19;
+}
