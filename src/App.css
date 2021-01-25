@@ -38,6 +38,7 @@ h1 {
   height: 98px;
   font-size: 2rem;
   padding: 15px;
+  outline: none;
 }
 
 .todo-input > button {
@@ -51,6 +52,8 @@ h1 {
   font-family: Rhodium Libre;
   font-size: 2rem;
   color: #ffffff;
+  outline: none;
+  cursor: pointer;
 }
 
 .todo-list {
@@ -74,4 +77,11 @@ h1 {
   border: none;
   font-size: 3rem;
   color: #f7ee19;
+}
+
+.alert {
+  border: 2px solid red;
+  padding: 10px;
+  font-family: sans-serif;
+  text-align: center;
 }
