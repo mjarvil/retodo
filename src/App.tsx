@@ -54,7 +54,6 @@ const App: React.FC = () => {
   }
 
   const deleteTodoHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(e.currentTarget.dataset.todo)
 
     const updatedList = todoList.filter(todo => {
       return todo.work !== e.currentTarget.dataset.todo;
