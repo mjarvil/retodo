@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {Todo} from './utils';
+import {Todo,KeyPress} from './utils';
 import List from './components/List';
 import About from './components/About';
 import './App.css';
@@ -17,12 +17,11 @@ const App: React.FC = () => {
 
   const todoChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if(e.currentTarget.value !== null || e.currentTarget.value !== undefined || e.currentTarget.value !== '') {
-      console.log(e.currentTarget.value);
       setTodo(e.currentTarget.value);
     }
   }
 
-  const addTodo = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const addTodo = () => {
     if(todo.length > 0) {
       
       if(hasDuplicate()) {
@@ -53,6 +52,12 @@ const App: React.FC = () => {
     return !!duplicateFound;
   }
 
+  const keyBoardEvent = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if(e.nativeEvent.code === KeyPress.enterKey) {
+      addTodo();
+    }
+  }
+
   const deleteTodoHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
 
     const updatedList = todoList.filter(todo => {
@@ -70,7 +75,7 @@ const App: React.FC = () => {
         <div className="alert">Todo already exists</div>
       ) : null}
       <div className="todo-input">
-        <input type="text" ref={todoInput} onChange={todoChangeHandler}/>
+        <input type="text" ref={todoInput} onChange={todoChangeHandler} onKeyPress={keyBoardEvent}/>
         <button onClick={addTodo}>Add</button>
       </div>
 
