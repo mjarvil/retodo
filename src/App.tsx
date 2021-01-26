@@ -1,7 +1,8 @@
 import React, {useRef, useState} from 'react';
-import {Todo} from './utils'
-import List from './components/List'
-import './App.css'
+import {Todo} from './utils';
+import List from './components/List';
+import About from './components/About';
+import './App.css';
 
 
 const App: React.FC = () => {
@@ -64,6 +65,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h1>Activity list</h1>
+      <About />
       {doesExist ? (
         <div className="alert">Todo already exists</div>
       ) : null}

@@ -68,7 +68,7 @@ h1 {
   display: flex;
   flex-direction: row;
   padding: 5px 20px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .todo-list > button {
@@ -84,4 +84,11 @@ h1 {
   padding: 10px;
   font-family: sans-serif;
   text-align: center;
+}
+
+.about {
+  font-size: 1.4rem;
+  padding: 20px;
+  line-height: 35px;
+  border: 2px solid rgb(127, 223, 38);
 }
