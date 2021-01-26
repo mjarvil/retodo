@@ -66,7 +66,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1>React To do App</h1>
+      <h1>Activity list</h1>
       {doesExist ? (
         <div className="alert">Todo already exists</div>
       ) : null}
