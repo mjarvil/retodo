@@ -4,7 +4,6 @@ import List from './components/List'
 import './App.css'
 
 
-
 const App: React.FC = () => {
 
   // reference  
