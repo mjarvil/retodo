@@ -1,10 +1,9 @@
 import React, {useRef, useState} from 'react';
+import {Todo} from './utils'
+import List from './components/List'
 import './App.css'
 
-type Todo = {
-  id: number;
-  work: string;
-}
+
 
 const App: React.FC = () => {
 
@@ -75,16 +74,7 @@ const App: React.FC = () => {
         <button onClick={addTodo}>Add</button>
       </div>
 
-      {todoList.length > 0 ? (
-        todoList.map((todo, idx) => {
-          return (
-            <div className='todo-list' key={todo.id}>
-              <span>{todo.work}</span>
-              <button data-id={todo.id} data-todo={todo.work} onClick={deleteTodoHandler}>X</button>
-            </div>
-          )
-        })
-      ) : null}
+      <List todoList={todoList} callback={deleteTodoHandler} />
 
     </div>
   );
